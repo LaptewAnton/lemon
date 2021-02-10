@@ -32,11 +32,11 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="create" id="createUl">
                     <li><a class="dropdown-item" href="{{route('new-recipe')}}">Добавить рецепт</a></li>
-                    <li><a class="dropdown-item" href="#">Добавить категорию рецепта</a></li>
-                    <li><a class="dropdown-item" href="#">Добавить пользователя</a></li>
-                    <li><a class="dropdown-item" href="#">Добавить статус пользователя</a></li>
-                    <li><a class="dropdown-item" href="#">Добавить тег</a></li>
-                    <li><a class="dropdown-item" href="#">Добавить файл</a></li>
+                    <li><a class="dropdown-item" href="{{route('new-recipe-category')}}">Добавить категорию рецепта</a></li>
+                    <li><a class="dropdown-item" href="{{route('new-user')}}">Добавить пользователя</a></li>
+                    <li><a class="dropdown-item" href="{{route('new-user-status')}}">Добавить статус пользователя</a></li>
+                    <li><a class="dropdown-item" href="{{route('new-tag')}}">Добавить тег</a></li>
+                    <li><a class="dropdown-item" href="{{route('new-file')}}">Добавить файл</a></li>
                 </ul>
             </div>
         </div>

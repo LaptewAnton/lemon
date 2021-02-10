@@ -1,16 +1,13 @@
 @extends('admin.admin-layout')
 @section('title')
-    Создание рецепта
+    Добавление рецепта
 @endsection
 @section('main')
-    <div class="row justify-content-center">
-        <div class="col-xl-6">
             <form method="post" action="/new-recipe/add">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Название</label>
-                    <input maxlength="60" required type="text" class="form-control" name="title" id="title"
-                           aria-describedby="emailHelp">
+                    <input maxlength="60" required type="text" class="form-control" name="title" id="title">
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Описание</label>
@@ -37,6 +34,4 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
-        </div>
-    </div>
 @endsection
