@@ -8,6 +8,6 @@ lemon is tasty
 <hr>
 
 Кусок макета:
-<img src="https://www.dropbox.com/sh/721r284wiv0dcyq/AABTSK3U0DjG-RZoxQRZEM4Ma?dl=0&preview=Eg9gPfm0CCQ.jpg">
+<img src="https://cdn.discordapp.com/attachments/739083859697598524/808922459688009728/CnxZ1fapScM.jpg">
 
 Ссылка на сам макет: https://www.dropbox.com/sh/721r284wiv0dcyq/AABTSK3U0DjG-RZoxQRZEM4Ma?dl=0&preview=Lemon.psd
