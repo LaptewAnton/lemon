@@ -10,4 +10,4 @@ lemon is tasty
 Кусок макета:
 <img src="https://cdn.discordapp.com/attachments/739083859697598524/808922459688009728/CnxZ1fapScM.jpg">
 
-<a src="https://www.dropbox.com/sh/721r284wiv0dcyq/AABTSK3U0DjG-RZoxQRZEM4Ma?dl=0&preview=Lemon.psd">Ссылка на сам макет</a>
+<p>Ссылка на сам макет:</p>https://www.dropbox.com/sh/721r284wiv0dcyq/AABTSK3U0DjG-RZoxQRZEM4Ma?dl=0&preview=Lemon.psd
