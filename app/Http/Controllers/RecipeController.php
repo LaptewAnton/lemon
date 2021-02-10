@@ -7,7 +7,8 @@ use App\Models\Recipe;
 
 class RecipeController extends Controller
 {
-    public function submit(Request $request){
+    public function submit(Request $request)
+    {
 
         $recipe = new Recipe();
         $recipe->title = $request->input('title');
@@ -17,11 +18,12 @@ class RecipeController extends Controller
         $recipe->difficulty = $request->input('difficulty');
         $recipe->healthy_check = $request->input('healthyCheck');
 
-//        dd($request);
-
         $recipe->save();
-
         return redirect()->route('recipes');
+    }
 
+    public function allRecipes()
+    {
+        return view('recipes', ['data' => Recipe::all()]);
     }
 }
