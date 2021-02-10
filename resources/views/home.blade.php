@@ -2,6 +2,6 @@
 @section('title')
     Главная
 @endsection
-@section('main')
+@section('content')
     <h3>Просто заглушка</h3>
 @endsection

@@ -2,7 +2,7 @@
 @section('title')
     Все рецепты
 @endsection
-@section('main')
+@section('content')
     <div class="row">
         @foreach($data as $recipe)
             <div class="col-xl-4">

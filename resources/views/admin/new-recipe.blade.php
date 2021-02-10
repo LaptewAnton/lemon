@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('admin.admin-layout')
 @section('title')
     Создание рецепта
 @endsection
