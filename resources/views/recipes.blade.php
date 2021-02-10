@@ -14,7 +14,6 @@
                             <span>{{ $recipe->time }}</span> |
                             <span>{{ $recipe->difficulty }}</span>
                         </p>
-
                         <a href="#" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
