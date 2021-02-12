@@ -5,20 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Recipe extends Model
+class File extends Model
 {
     use HasFactory;
-
-    protected $table = 'recipes';
-
+    protected $table = 'files';
     protected $fillable = [
-        'title',
+        'name',
+        'extension',
         'description',
-        'ingridients',
-        'time',
-        'difficulty',
-        'healthy_check'
     ];
-
-    protected $guarded = [];
 }

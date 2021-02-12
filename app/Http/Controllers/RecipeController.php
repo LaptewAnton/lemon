@@ -19,11 +19,15 @@ class RecipeController extends Controller
         $recipe->healthy_check = $request->input('healthyCheck');
 
         $recipe->save();
-        return redirect()->route('recipes');
+        return redirect()->route('admin.tables.recipes');
     }
 
     public function allRecipes()
     {
         return view('recipes', ['data' => Recipe::all()]);
+    }
+    public function allAdminRecipes()
+    {
+        return view('admin.tables.recipes', ['data' => Recipe::all()]);
     }
 }
