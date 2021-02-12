@@ -25,6 +25,6 @@ class FileController extends Controller
     }
     public function allAdminFiles()
     {
-        return view('admin.tables.files', ['data' => File::all()]);
+        return view('admin.table.files', ['data' => File::all()]);
     }
 }

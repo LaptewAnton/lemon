@@ -16,6 +16,6 @@ class UserStatusController extends Controller
     }
     public function allAdminUserStatuses()
     {
-        return view('admin.tables.user-statuses', ['data' => userStatus::all()]);
+        return view('admin.table.user-statuses', ['data' => userStatus::all()]);
     }
 }

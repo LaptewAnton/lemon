@@ -3,7 +3,7 @@
     Добавление категории сайта
 @endsection
 @section('main')
-    <form method="post" action="/new-recipe-category/add">
+    <form method="post" action="/admin/new/recipe-category/add">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Название</label>

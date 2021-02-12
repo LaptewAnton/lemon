@@ -3,7 +3,7 @@
     Добавление файла
 @endsection
 @section('main')
-    <form method="post" enctype="multipart/form-data" action="/new-file/add">
+    <form method="post" enctype="multipart/form-data" action="/admin/new/file/add">
         @csrf
         <div class="mb-3">
             <label for="description" class="form-label">Описание</label>

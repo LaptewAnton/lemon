@@ -3,7 +3,7 @@
     Добавление статуса пользователя
 @endsection
 @section('main')
-    <form method="post" action="/new-user-status/add">
+    <form method="post" action="/admin/new/user-status/add">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Название</label>

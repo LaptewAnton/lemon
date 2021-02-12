@@ -23,7 +23,7 @@
                 <td>{{ $recipe->time }}</td>
                 <td>{{ $recipe->difficulty }}</td>
                 <td>{{ $recipe->healthy_check }}</td>
-                <td><a href="#">Редактировать</a></td>
+                <td><a href="{{route('show-admin-recipe', $recipe->id)}}">Редактировать</a></td>
                 <td><a href="#">Удалить</a></td>
             </tr>
         @endforeach

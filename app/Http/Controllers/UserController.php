@@ -19,6 +19,6 @@ class UserController extends Controller
     }
     public function allAdminUsers()
     {
-        return view('admin.tables.users', ['data' => User::all()]);
+        return view('admin.table.users', ['data' => User::all()]);
     }
 }

@@ -16,6 +16,6 @@ class TagController extends Controller
     }
     public function allAdminTags()
     {
-        return view('admin.tables.tags', ['data' => Tag::all()]);
+        return view('admin.table.tags', ['data' => Tag::all()]);
     }
 }

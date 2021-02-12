@@ -17,6 +17,6 @@ class RecipeCategoryController extends Controller
     }
     public function allAdminRecipeCategories()
     {
-        return view('admin.tables.recipe-categories', ['data' => recipeCategory::all()]);
+        return view('admin.table.recipe-categories', ['data' => recipeCategory::all()]);
     }
 }

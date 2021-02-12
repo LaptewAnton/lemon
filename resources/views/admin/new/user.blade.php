@@ -3,7 +3,7 @@
     Добавление пользователя
 @endsection
 @section('main')
-    <form method="post" action="/new-user/add">
+    <form method="post" action="/admin/new/user/add">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Имя</label>
