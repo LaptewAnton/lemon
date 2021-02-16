@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class RecipeCategoryController extends Controller
 {
-    public function submit(Request $request)
+    public function create(Request $request)
     {
         $RecipeCategory = new recipeCategory();
         $RecipeCategory->name = $request->input('name');

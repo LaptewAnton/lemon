@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class FileController extends Controller
 {
-    public function submit(Request $request){
+    public function create(Request $request){
         $file = new File();
 
         $file_input = $request->file('file');

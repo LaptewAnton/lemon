@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function submit(Request $request){
+    public function create(Request $request){
         $user = new User();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -20,5 +20,8 @@ class UserController extends Controller
     public function allAdminUsers()
     {
         return view('admin.table.users', ['data' => User::all()]);
+    }
+    public function delete(){
+
     }
 }

@@ -18,57 +18,76 @@ Route::get('/admin', function () {
 
 //Таблицы
 
-//рецепты
-Route::get('/admin/table/recipes', 'App\Http\Controllers\RecipeController@allAdminRecipes')->name('admin-recipes');
+//Рецепты
+Route::get('/admin/table/recipes',
+    'App\Http\Controllers\RecipeController@allAdminRecipes'
+)->name('admin-recipes');//Отображение рецептов в админке
 Route::get(
     '/admin/table/recipes/{id}',
     'App\Http\Controllers\RecipeController@showAdminRecipe'
-)->name('show-admin-recipe');
+)->name('show-admin-recipe');//Редактирование рецепта
 Route::post(
     '/admin/table/recipes/{id}/update',
     'App\Http\Controllers\RecipeController@update'
-)->name('update-admin-recipe');
-Route::get('/admin/table/recipes/{id}/delete', 'App\Http\Controllers\RecipeController@delete')->name('delete-admin-recipe');
-Route::get('/admin/table/recipe-categories', 'App\Http\Controllers\RecipeCategoryController@allAdminRecipeCategories')->name('admin-recipe-categories');
-Route::get('/admin/table/users', 'App\Http\Controllers\UserController@allAdminUsers')->name('admin-users');
-Route::get('/admin/table/user-statuses', 'App\Http\Controllers\UserStatusController@allAdminUserStatuses')->name('admin-user-statuses');
-Route::get('/admin/table/tags', 'App\Http\Controllers\TagController@allAdminTags')->name('admin-tags');
-Route::get('/admin/table/files', 'App\Http\Controllers\FileController@allAdminFiles')->name('admin-files');
-
-
-//Новые данные
-//Новый рецепт с админки
+)->name('update-admin-recipe');//POST запрос на редактирование рецепта
+Route::get('/admin/table/recipes/{id}/delete',
+    'App\Http\Controllers\RecipeController@delete'
+)->name('delete-admin-recipe');//Удаление рецепта
 Route::get('/admin/new-recipe', function () {
     return view('admin/new/recipe');
-})->name('admin-new-recipe');
-Route::post('admin/new/recipe/add', 'App\Http\Controllers\RecipeController@submit');
+})->name('admin-new-recipe');//Создание рецепта
+Route::post('admin/new/recipe/add',
+    'App\Http\Controllers\RecipeController@create');//POST запрос на создание рецепта
 
-//Новая категория рецептов с админки
+//Категории рецептов
+Route::get('/admin/table/recipe-categories',
+    'App\Http\Controllers\RecipeCategoryController@allAdminRecipeCategories'
+)->name('admin-recipe-categories');//Отображение категорий в админке
 Route::get('/admin/new/recipe-category', function () {
     return view('admin/new/recipe-category');
-})->name('admin-new-recipe-category');
-Route::post('admin/new/recipe-category/add', 'App\Http\Controllers\RecipeCategoryController@submit');
+})->name('admin-new-recipe-category');//Создание категории
+Route::post('admin/new/recipe-category/add',
+    'App\Http\Controllers\RecipeCategoryController@create');//POST запрос на создание категории
 
-//Новый пользователь с админки
+//Пользователи
+Route::get('/admin/table/users',
+    'App\Http\Controllers\UserController@allAdminUsers'
+)->name('admin-users');//Отображение ползователей в админке
 Route::get('/admin/new/user', function () {
     return view('admin/new/user');
-})->name('admin-new-user');
-Route::post('/admin/new/user/add', 'App\Http\Controllers\UserController@submit');
+})->name('admin-new-user');//Создание пользователя
+Route::post('/admin/new/user/add',
+    'App\Http\Controllers\UserController@create');//POST запрос на создание пользователя
 
-//Новый статус пользователя с админки
+//Статусы пользователей
+Route::get('/admin/table/user-statuses',
+    'App\Http\Controllers\UserStatusController@allAdminUserStatuses'
+)->name('admin-user-statuses');//Отображение статусов в админке
+Route::get('/admin/table/user-statuses/{id}/delete',
+    'App\Http\Controllers\UserStatusController@delete'
+)->name('delete-status');//Удаление статуса
 Route::get('/admin/new/user-status', function () {
     return view('admin/new/user-status');
-})->name('admin-new-user-status');
-Route::post('/admin/new/user-status/add', 'App\Http\Controllers\UserStatusController@submit');
+})->name('admin-new-user-status');//Создание статусы
+Route::post('/admin/new/user-status/add',
+    'App\Http\Controllers\UserStatusController@create');//POST запрос на создание статуса
 
-//Новый тег с админки
+//Теги
+Route::get('/admin/table/tags',
+    'App\Http\Controllers\TagController@allAdminTags'
+)->name('admin-tags');//Отображение тегов в админке
 Route::get('/admin/new/tag', function () {
     return view('admin/new/tag');
-})->name('admin-new-tag');
-Route::post('/admin/new/tag/add', 'App\Http\Controllers\TagController@submit');
+})->name('admin-new-tag');//Создание тега
+Route::post('/admin/new/tag/add',
+    'App\Http\Controllers\TagController@create');//POST запрос на создание тега
 
-//Новый файл с админки
+//Файлы
+Route::get('/admin/table/files',
+    'App\Http\Controllers\FileController@allAdminFiles'
+)->name('admin-files');//Отображение файлов в админке
 Route::get('/admin/new/file', function () {
     return view('admin/new/file');
-})->name('admin-new-file');
-Route::post('/admin/new/file/add', 'App\Http\Controllers\FileController@submit');
+})->name('admin-new-file');//Добавление файла
+Route::post('/admin/new/file/add',
+    'App\Http\Controllers\FileController@create');//POST запрос на добавление файла

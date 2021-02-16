@@ -19,6 +19,14 @@
             <textarea maxlength="350" required type="text" rows="5" cols="45" class="form-control"
                       name="ingridients" id="ingridients"></textarea>
         </div>
+{{--        <div class="mb-3">--}}
+{{--            <label for="category" class="form-label">Категория</label>--}}
+{{--            <select name="category" id="category">--}}
+{{--                @foreach($data as $item)--}}
+{{--                <option>{{$data->category}}</option>--}}
+{{--                @endforeach--}}
+{{--            </select>--}}
+{{--        </div>--}}
         <div class="mb-3">
             <label for="time" class="form-label">Время на приготовление</label>
             <input maxlength="60" required type="text" class="form-control" name="time" id="time">

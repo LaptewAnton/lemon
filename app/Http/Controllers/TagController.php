@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
-    public function submit(Request $request){
+    public function create(Request $request){
         $tag = new Tag();
         $tag->name=$request->input('name');
 

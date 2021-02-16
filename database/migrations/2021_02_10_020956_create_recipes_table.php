@@ -13,6 +13,7 @@ class CreateRecipesTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('ingridients');
+//            $table->integer('category_id');
             $table->string('time');
             $table->string('difficulty');
             $table->boolean('healthy_check')->default(0);

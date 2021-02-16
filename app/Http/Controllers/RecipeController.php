@@ -7,13 +7,14 @@ use App\Models\Recipe;
 
 class RecipeController extends Controller
 {
-    public function submit(Request $request)
+    public function create(Request $request)
     {
 
         $recipe = new Recipe();
         $recipe->title = $request->input('title');
         $recipe->description = $request->input('description');
         $recipe->ingridients = $request->input('ingridients');
+//        $recipe->category_id = $request->input('category');
         $recipe->time = $request->input('time');
         $recipe->difficulty = $request->input('difficulty');
         $recipe->healthy_check = $request->input('healthyCheck');
@@ -39,6 +40,7 @@ class RecipeController extends Controller
         $recipe->title = $request->input('title');
         $recipe->description = $request->input('description');
         $recipe->ingridients = $request->input('ingridients');
+//        $recipe->category_id = $request->input('category');
         $recipe->time = $request->input('time');
         $recipe->difficulty = $request->input('difficulty');
         $recipe->healthy_check = $request->input('healthyCheck');
