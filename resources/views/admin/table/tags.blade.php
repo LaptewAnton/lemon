@@ -18,7 +18,7 @@
         <th scope="row">{{ $tag->id }}</th>
         <td>{{ $tag->name }}</td>
         <td><a href="#">Редактировать</a></td>
-        <td><a href="#">Удалить</a></td>
+        <td><a href="{{route('delete-admin-tag', $recipe->id)}}">Удалить</a></td>
     </tr>
     @endforeach
     </tbody>

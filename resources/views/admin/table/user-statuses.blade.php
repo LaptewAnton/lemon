@@ -18,7 +18,7 @@
                 <th scope="row">{{ $userStatus->id }}</th>
                 <td>{{ $userStatus->name }}</td>
                 <td><a href="#">Редактировать</a></td>
-                <td><a href="#">Удалить</a></td>
+                <td><a href="{{route('delete-admin-status', $recipe->id)}}">Удалить</a></td>
             </tr>
         @endforeach
         </tbody>

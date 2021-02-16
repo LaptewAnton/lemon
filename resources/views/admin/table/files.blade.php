@@ -22,7 +22,7 @@
                 <td>{{ $file->extension }}</td>
                 <td>рецепт/2.ru</td>
                 <td><a href="#">Редактировать</a></td>
-                <td><a href="#">Удалить</a></td>
+                <td><a href="{{route('delete-admin-files', $recipe->id)}}">Удалить</a></td>
         </tr>
         @endforeach
         </tbody>

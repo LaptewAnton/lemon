@@ -20,7 +20,7 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td><a href="#">Редактировать</a></td>
-                <td><a href="#">Удалить</a></td>
+                <td><a href="{{route('delete-admin-user', $recipe->id)}}">Удалить</a></td>
             </tr>
         @endforeach
         </tbody>
