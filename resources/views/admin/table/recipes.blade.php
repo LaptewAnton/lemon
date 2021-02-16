@@ -18,13 +18,13 @@
         <tbody>
         @foreach($data as $recipe)
             <tr>
-                <th scope="row">1</th>
+                <th scope="row">{{ $recipe->id }}</th>
                 <td>{{ $recipe->title }}</td>
                 <td>{{ $recipe->time }}</td>
                 <td>{{ $recipe->difficulty }}</td>
                 <td>{{ $recipe->healthy_check }}</td>
                 <td><a href="{{route('show-admin-recipe', $recipe->id)}}">Редактировать</a></td>
-                <td><a href="#">Удалить</a></td>
+                <td><a href="{{route('delete-admin-recipe', $recipe->id)}}">Удалить</a></td>
             </tr>
         @endforeach
         </tbody>

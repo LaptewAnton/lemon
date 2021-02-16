@@ -3,7 +3,7 @@
     Редактирование "{{$data->title}}"
 @endsection
 @section('main')
-    <form method="post" action="{{route('update-admin-recipe', $data->id)}}}}">
+    <form method="post" action="{{route('update-admin-recipe', $data->id)}}">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Название</label>
@@ -29,8 +29,8 @@
         </div>
         <div class="mb-3 form-check">
             <input type="hidden" value="0" name="healthyCheck">
-            <input type="checkbox" value="1" class="form-check-input" name="healthyCheck" id="healthyCheck">
-            <label class="form-check-label" for="healthyCheck">Полезная еда</label>
+            <input type="checkbox" value="1" class="form-check-input" name="healthyCheck" id="healthyCheck" >
+            <label class="form-check-label" @if($data->healthy_check === 1) checked="checked" @endif for="healthyCheck">Полезная еда</label>
         </div>
         <button type="submit" class="btn btn-primary">Редактировать</button>
     </form>

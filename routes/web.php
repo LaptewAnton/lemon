@@ -28,7 +28,7 @@ Route::post(
     '/admin/table/recipes/{id}/update',
     'App\Http\Controllers\RecipeController@update'
 )->name('update-admin-recipe');
-
+Route::get('/admin/table/recipes/{id}/delete', 'App\Http\Controllers\RecipeController@delete')->name('delete-admin-recipe');
 Route::get('/admin/table/recipe-categories', 'App\Http\Controllers\RecipeCategoryController@allAdminRecipeCategories')->name('admin-recipe-categories');
 Route::get('/admin/table/users', 'App\Http\Controllers\UserController@allAdminUsers')->name('admin-users');
 Route::get('/admin/table/user-statuses', 'App\Http\Controllers\UserStatusController@allAdminUserStatuses')->name('admin-user-statuses');
@@ -41,7 +41,7 @@ Route::get('/admin/table/files', 'App\Http\Controllers\FileController@allAdminFi
 Route::get('/admin/new-recipe', function () {
     return view('admin/new/recipe');
 })->name('admin-new-recipe');
-Route::post('admin/new-recipe/add', 'App\Http\Controllers\RecipeController@submit');
+Route::post('admin/new/recipe/add', 'App\Http\Controllers\RecipeController@submit');
 
 //Новая категория рецептов с админки
 Route::get('/admin/new/recipe-category', function () {

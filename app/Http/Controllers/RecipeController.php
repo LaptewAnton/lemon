@@ -19,7 +19,7 @@ class RecipeController extends Controller
         $recipe->healthy_check = $request->input('healthyCheck');
 
         $recipe->save();
-        return redirect()->route('admin.table.recipes');
+        return redirect()->route('admin-recipes');
     }
 
     public function allRecipes()
@@ -44,6 +44,10 @@ class RecipeController extends Controller
         $recipe->healthy_check = $request->input('healthyCheck');
 
         $recipe->save();
-        return redirect()->route('show-admin-recipe', $id)->with('success', 'Сообщение было добавлено');
+        return redirect()->route('show-admin-recipe', $id);
+    }
+    public function delete($id){
+        Recipe::find($id)->delete();
+        return redirect()->route('admin-recipes');
     }
 }
