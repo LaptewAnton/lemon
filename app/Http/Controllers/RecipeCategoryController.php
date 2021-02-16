@@ -19,4 +19,8 @@ class RecipeCategoryController extends Controller
     {
         return view('admin.table.recipe-categories', ['data' => recipeCategory::all()]);
     }
+    public function delete($id){
+        recipeCategory::find($id)->delete();
+        return view('admin.table.recipe-categories', ['data' => recipeCategory::all()]);
+    }
 }

@@ -43,6 +43,9 @@ Route::post('admin/new/recipe/add',
 Route::get('/admin/table/recipe-categories',
     'App\Http\Controllers\RecipeCategoryController@allAdminRecipeCategories'
 )->name('admin-recipe-categories');//Отображение категорий в админке
+Route::get('/admin/table/recipe-category/{id}/delete',
+    'App\Http\Controllers\RecipeCategoryController@delete'
+)->name('delete-admin-recipe-category');//Удаление категории
 Route::get('/admin/new/recipe-category', function () {
     return view('admin/new/recipe-category');
 })->name('admin-new-recipe-category');//Создание категории
@@ -53,6 +56,9 @@ Route::post('admin/new/recipe-category/add',
 Route::get('/admin/table/users',
     'App\Http\Controllers\UserController@allAdminUsers'
 )->name('admin-users');//Отображение ползователей в админке
+Route::get('/admin/table/user/{id}/delete',
+    'App\Http\Controllers\UserController@delete'
+)->name('delete-admin-user');//Удаление пользователя
 Route::get('/admin/new/user', function () {
     return view('admin/new/user');
 })->name('admin-new-user');//Создание пользователя
@@ -65,7 +71,7 @@ Route::get('/admin/table/user-statuses',
 )->name('admin-user-statuses');//Отображение статусов в админке
 Route::get('/admin/table/user-statuses/{id}/delete',
     'App\Http\Controllers\UserStatusController@delete'
-)->name('delete-status');//Удаление статуса
+)->name('delete-admin-status');//Удаление статуса
 Route::get('/admin/new/user-status', function () {
     return view('admin/new/user-status');
 })->name('admin-new-user-status');//Создание статусы
@@ -76,6 +82,9 @@ Route::post('/admin/new/user-status/add',
 Route::get('/admin/table/tags',
     'App\Http\Controllers\TagController@allAdminTags'
 )->name('admin-tags');//Отображение тегов в админке
+Route::get('/admin/table/tags/{id}/delete',
+    'App\Http\Controllers\TagController@delete'
+)->name('delete-admin-tag');//Удаление тега
 Route::get('/admin/new/tag', function () {
     return view('admin/new/tag');
 })->name('admin-new-tag');//Создание тега
@@ -86,6 +95,9 @@ Route::post('/admin/new/tag/add',
 Route::get('/admin/table/files',
     'App\Http\Controllers\FileController@allAdminFiles'
 )->name('admin-files');//Отображение файлов в админке
+Route::get('/admin/table/files/{id}/delete',
+    'App\Http\Controllers\FileController@delete'
+)->name('delete-admin-files');//Удаление файла
 Route::get('/admin/new/file', function () {
     return view('admin/new/file');
 })->name('admin-new-file');//Добавление файла

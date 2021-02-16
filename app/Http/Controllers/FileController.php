@@ -27,4 +27,8 @@ class FileController extends Controller
     {
         return view('admin.table.files', ['data' => File::all()]);
     }
+    public function delete($id){
+        File::find($id)->delete();
+        return view('admin.table.files', ['data' => File::all()]);
+    }
 }

@@ -18,4 +18,8 @@ class TagController extends Controller
     {
         return view('admin.table.tags', ['data' => Tag::all()]);
     }
+    public function delete($id){
+        Tag::find($id)->delete();
+        return view('admin.table.tags', ['data' => Tag::all()]);
+    }
 }

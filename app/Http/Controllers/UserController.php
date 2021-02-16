@@ -21,7 +21,8 @@ class UserController extends Controller
     {
         return view('admin.table.users', ['data' => User::all()]);
     }
-    public function delete(){
-
+    public function delete($id){
+        User::find($id)->delete();
+        return view('admin.table.users', ['data' => User::all()]);
     }
 }
